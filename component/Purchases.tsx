@@ -1,15 +1,16 @@
-import { View, Text, StyleSheet } from 'react-native'
+import { View, Text, StyleSheet,  Image } from 'react-native'
 import React from 'react'
-import { FontAwesome, FontAwesome5, MaterialCommunityIcons } from '@expo/vector-icons';
-import MaterialIcons from '@expo/vector-icons/MaterialIcons';
+import { MaterialCommunityIcons } from '@expo/vector-icons';
 
 
-const RechargeBill = () => {
+
+const Purchases = () => {
+
   return (
     <>
       <View style={styles.transferContainer}>
         <View style={styles.recharge}>
-          <Text style={styles.headerText}>Recharge & Pay Bill</Text>
+          <Text style={styles.headerText}>Purchases</Text>
           <Text style={styles.all}>View All</Text>
         </View>
 
@@ -18,31 +19,41 @@ const RechargeBill = () => {
           
           <View style={styles.iconBox}>
             <View style={styles.iconContainer}>
-              <MaterialIcons name="mobile-friendly" size={26} color="#9e5ed8" />
+            <MaterialCommunityIcons name="podium-gold" size={24} color="#9e5ed8" />
             </View>
-            <Text style={styles.text}>Mobile Recharge</Text>
+            <Text style={styles.text}>Gold</Text>
           </View>
          
 
           <View style={styles.iconBox}>
-            <View style={styles.iconContainer}>
-              <MaterialCommunityIcons name="cash" size={26} color="#9e5ed8" />
-            </View>
-            <Text style={styles.text}>Loan Repayment</Text>
+       
+              <View style={styles.iconContainer}>
+                <Image
+                  source={{ uri: "https://static1.xdaimages.com/wordpress/wp-content/uploads/2019/05/play-store-1.jpg"}}
+                  style={styles.image}
+                />
+              </View>
+         
+
+            <Text style={styles.text}>Google Play</Text>
           </View>
 
           <View style={styles.iconBox}>
             <View style={styles.iconContainer}>
-              <FontAwesome name="credit-card-alt" size={24} color="#9e5ed8" />
+            <MaterialCommunityIcons   name="ticket-outline" size={28} color="#9e5ed8" />
+
             </View>
-            <Text style={styles.text}>Credit Card Payment</Text>
+            <Text style={styles.text}>Brand Vouchers</Text>
           </View>
 
           <View style={styles.iconBox}>
             <View style={styles.iconContainer}>
-              <FontAwesome5 name="home" size={26} color="#9e5ed8" />
+            <Image
+                  source={{ uri: "https://cdsassets.apple.com/live/7WUAS350/images/gifting/gift-cards-and-certificates/gift-cards-app-store-itunes.png"}}
+                  style={styles.image}
+                />
             </View>
-            <Text style={styles.text}>Rent</Text>
+            <Text style={styles.text}>Gold Loan</Text>
           </View>
         </View>
 
@@ -70,7 +81,7 @@ const styles = StyleSheet.create({
     marginBottom: 20,
   },
   iconContainer: {
-    // padding: 2,
+    // padding: 10,
     // borderRadius: 10,
     // backgroundColor: "#955fd1",
     marginBottom: 5,
@@ -78,7 +89,7 @@ const styles = StyleSheet.create({
   text: {
     fontSize: 12,
     color: "white",
-    width: "90%",
+    width: "100%",
     textAlign: "center"
   },
   headerText: {
@@ -99,7 +110,12 @@ const styles = StyleSheet.create({
   recharge: {
     flexDirection: "row",
     justifyContent: "space-between"
-  }
+  },
+  image: {
+    width: 40, 
+    height: 40,
+    borderRadius: 10,
+  },
 });
 
-export default RechargeBill
+export default Purchases

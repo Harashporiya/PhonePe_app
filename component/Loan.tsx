@@ -4,12 +4,12 @@ import { FontAwesome, FontAwesome5, MaterialCommunityIcons } from '@expo/vector-
 import MaterialIcons from '@expo/vector-icons/MaterialIcons';
 
 
-const RechargeBill = () => {
+const Loan = () => {
   return (
     <>
       <View style={styles.transferContainer}>
         <View style={styles.recharge}>
-          <Text style={styles.headerText}>Recharge & Pay Bill</Text>
+          <Text style={styles.headerText}>Loan</Text>
           <Text style={styles.all}>View All</Text>
         </View>
 
@@ -18,31 +18,32 @@ const RechargeBill = () => {
           
           <View style={styles.iconBox}>
             <View style={styles.iconContainer}>
-              <MaterialIcons name="mobile-friendly" size={26} color="#9e5ed8" />
+            <MaterialIcons name="credit-score" size={28} color="#9e5ed8" />
             </View>
-            <Text style={styles.text}>Mobile Recharge</Text>
+            <Text style={styles.text}>Credit Score</Text>
           </View>
          
 
           <View style={styles.iconBox}>
             <View style={styles.iconContainer}>
-              <MaterialCommunityIcons name="cash" size={26} color="#9e5ed8" />
+            <MaterialCommunityIcons name="motorbike" size={28} color="#9e5ed8" />
             </View>
-            <Text style={styles.text}>Loan Repayment</Text>
+            <Text style={styles.text}>Bike Loan</Text>
           </View>
 
           <View style={styles.iconBox}>
             <View style={styles.iconContainer}>
-              <FontAwesome name="credit-card-alt" size={24} color="#9e5ed8" />
+            <MaterialCommunityIcons name="cash-refund" size={28} color="#9e5ed8" />
+
             </View>
-            <Text style={styles.text}>Credit Card Payment</Text>
+            <Text style={styles.text}>Mutual Fund Loan</Text>
           </View>
 
           <View style={styles.iconBox}>
             <View style={styles.iconContainer}>
-              <FontAwesome5 name="home" size={26} color="#9e5ed8" />
+            <MaterialCommunityIcons name="gold" size={28} color="#9e5ed8" />
             </View>
-            <Text style={styles.text}>Rent</Text>
+            <Text style={styles.text}>Gold Loan</Text>
           </View>
         </View>
 
@@ -70,7 +71,7 @@ const styles = StyleSheet.create({
     marginBottom: 20,
   },
   iconContainer: {
-    // padding: 2,
+    // padding: 10,
     // borderRadius: 10,
     // backgroundColor: "#955fd1",
     marginBottom: 5,
@@ -102,4 +103,4 @@ const styles = StyleSheet.create({
   }
 });
 
-export default RechargeBill
+export default Loan

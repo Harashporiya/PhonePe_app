@@ -1,48 +1,57 @@
-import { View, Text, StyleSheet } from 'react-native'
+import { View, Text, StyleSheet,Linking, Image, TouchableOpacity } from 'react-native'
 import React from 'react'
 import { FontAwesome, FontAwesome5, MaterialCommunityIcons } from '@expo/vector-icons';
 import MaterialIcons from '@expo/vector-icons/MaterialIcons';
+import { Fontisto } from '@expo/vector-icons';
 
-
-const RechargeBill = () => {
+const TransitFood = () => {
+    const openLink = (url) => {
+        Linking.openURL(url).catch(err => console.error("Couldn't load page", err));
+      };
   return (
     <>
       <View style={styles.transferContainer}>
         <View style={styles.recharge}>
-          <Text style={styles.headerText}>Recharge & Pay Bill</Text>
+          <Text style={styles.headerText}>Transit & Food</Text>
           <Text style={styles.all}>View All</Text>
         </View>
 
         <View style={styles.iconBoxContainer}>
 
           
-          <View style={styles.iconBox}>
-            <View style={styles.iconContainer}>
-              <MaterialIcons name="mobile-friendly" size={26} color="#9e5ed8" />
-            </View>
-            <Text style={styles.text}>Mobile Recharge</Text>
+        <View style={styles.iconBox}>
+            <TouchableOpacity onPress={() => openLink("https://www.icicibank.com/personal-banking/accounts/savings-account?ITM=nli_cms_accounts_savings_account_header_nav.html")}>
+              <View style={styles.iconContainer}>
+                <Image
+                  source={{ uri: "https://pbs.twimg.com/profile_images/1158978933200568321/o5nAuaRq_400x400.png" }}
+                  style={styles.image}
+                />
+              </View>
+            </TouchableOpacity>
+            <Text style={styles.text}>Buy FASTag</Text>
           </View>
          
 
           <View style={styles.iconBox}>
             <View style={styles.iconContainer}>
-              <MaterialCommunityIcons name="cash" size={26} color="#9e5ed8" />
+            <Fontisto name="metro" size={38} color="#9e5ed8" />
             </View>
-            <Text style={styles.text}>Loan Repayment</Text>
+            <Text style={styles.text}>Metro</Text>
           </View>
 
           <View style={styles.iconBox}>
             <View style={styles.iconContainer}>
-              <FontAwesome name="credit-card-alt" size={24} color="#9e5ed8" />
+            <MaterialCommunityIcons name="credit-card-outline" size={28} color="#9e5ed8" />
+
             </View>
-            <Text style={styles.text}>Credit Card Payment</Text>
+            <Text style={styles.text}>NCMC Recharge</Text>
           </View>
 
           <View style={styles.iconBox}>
             <View style={styles.iconContainer}>
-              <FontAwesome5 name="home" size={26} color="#9e5ed8" />
+            <FontAwesome name="cab" size={24} color="#9e5ed8" />
             </View>
-            <Text style={styles.text}>Rent</Text>
+            <Text style={styles.text}>Prepaid Cabs</Text>
           </View>
         </View>
 
@@ -70,7 +79,7 @@ const styles = StyleSheet.create({
     marginBottom: 20,
   },
   iconContainer: {
-    // padding: 2,
+    // padding: 10,
     // borderRadius: 10,
     // backgroundColor: "#955fd1",
     marginBottom: 5,
@@ -78,7 +87,7 @@ const styles = StyleSheet.create({
   text: {
     fontSize: 12,
     color: "white",
-    width: "90%",
+    width: "100%",
     textAlign: "center"
   },
   headerText: {
@@ -99,7 +108,12 @@ const styles = StyleSheet.create({
   recharge: {
     flexDirection: "row",
     justifyContent: "space-between"
-  }
+  },
+  image: {
+    width: 40, 
+    height: 40,
+    borderRadius: 10,
+  },
 });
 
-export default RechargeBill
+export default TransitFood

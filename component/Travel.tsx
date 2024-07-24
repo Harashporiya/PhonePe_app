@@ -1,15 +1,15 @@
 import { View, Text, StyleSheet } from 'react-native'
 import React from 'react'
-import { FontAwesome, FontAwesome5, MaterialCommunityIcons } from '@expo/vector-icons';
+import { FontAwesome6, FontAwesome5, MaterialCommunityIcons,Ionicons } from '@expo/vector-icons';
 import MaterialIcons from '@expo/vector-icons/MaterialIcons';
 
 
-const RechargeBill = () => {
+const Travel = () => {
   return (
     <>
       <View style={styles.transferContainer}>
         <View style={styles.recharge}>
-          <Text style={styles.headerText}>Recharge & Pay Bill</Text>
+          <Text style={styles.headerText}>Travel</Text>
           <Text style={styles.all}>View All</Text>
         </View>
 
@@ -18,31 +18,31 @@ const RechargeBill = () => {
           
           <View style={styles.iconBox}>
             <View style={styles.iconContainer}>
-              <MaterialIcons name="mobile-friendly" size={26} color="#9e5ed8" />
+            <Ionicons name="airplane" size={24} color="#9e5ed8" />
             </View>
-            <Text style={styles.text}>Mobile Recharge</Text>
+            <Text style={styles.text}>Flights</Text>
           </View>
          
 
           <View style={styles.iconBox}>
             <View style={styles.iconContainer}>
-              <MaterialCommunityIcons name="cash" size={26} color="#9e5ed8" />
+            <FontAwesome5 name="bus-alt" size={24} color="#9e5ed8" />
             </View>
-            <Text style={styles.text}>Loan Repayment</Text>
+            <Text style={styles.text}>Bus</Text>
           </View>
 
           <View style={styles.iconBox}>
             <View style={styles.iconContainer}>
-              <FontAwesome name="credit-card-alt" size={24} color="#9e5ed8" />
+            <FontAwesome6 name="train-subway" size={24} color="#9e5ed8" />
             </View>
-            <Text style={styles.text}>Credit Card Payment</Text>
+            <Text style={styles.text}>Trains</Text>
           </View>
 
           <View style={styles.iconBox}>
             <View style={styles.iconContainer}>
-              <FontAwesome5 name="home" size={26} color="#9e5ed8" />
+            <FontAwesome5 name="hotel" size={24} color="#9e5ed8" />
             </View>
-            <Text style={styles.text}>Rent</Text>
+            <Text style={styles.text}>Hotels</Text>
           </View>
         </View>
 
@@ -70,7 +70,7 @@ const styles = StyleSheet.create({
     marginBottom: 20,
   },
   iconContainer: {
-    // padding: 2,
+    // padding: 10,
     // borderRadius: 10,
     // backgroundColor: "#955fd1",
     marginBottom: 5,
@@ -78,7 +78,7 @@ const styles = StyleSheet.create({
   text: {
     fontSize: 12,
     color: "white",
-    width: "90%",
+    width: "100%",
     textAlign: "center"
   },
   headerText: {
@@ -102,4 +102,4 @@ const styles = StyleSheet.create({
   }
 });
 
-export default RechargeBill
+export default Travel
