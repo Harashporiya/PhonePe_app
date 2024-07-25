@@ -1,49 +1,40 @@
-import { View, Text, StyleSheet, ScrollView } from 'react-native';
-import React from 'react';
-import Header from './component/Header';
-import TransferMoney from './component/TransferMoney';
-import RechargeBill from './component/RechargeBill';
+import * as React from 'react';
+import { NavigationContainer } from '@react-navigation/native';
+import { createStackNavigator } from '@react-navigation/stack';
+import Show from './Page/Show';
 import Loan from './component/Loan';
-import SponsoredLinks from './component/SponsoredLinks';
-import Insurance from './component/Insurance';
-import Travel from './component/Travel';
-import Slider from './component/Slider';
-import TransitFood from './component/TransitFood';
-import Purchases from './component/Purchases';
-import GameSponsored from './component/GameSponsored';
+import History from './component/History';
+import Scanner from './Page/Scanner';
+const Stack = createStackNavigator();
 
-const App = () => {
+function App() {
   return (
-    <>
-    
-      <Header  />
-      <ScrollView>
-      <View style={styles.container}>
-      <TransferMoney/> 
-      <RechargeBill/>
-      <Loan/>
-      <SponsoredLinks/>
-      <Insurance/>
-      <Travel/>
-      <Slider/>
-      <TransitFood/>
-      <Purchases/>
-      <GameSponsored/>
-      </View>
-
-    </ScrollView>
-    </>
+    <NavigationContainer>
+      <Stack.Navigator initialRouteName="Show">
+        <Stack.Screen
+          name="Show"
+          component={Show}
+          options={{ headerShown: false }}
+        />
+        <Stack.Screen
+          name="Loan"
+          component={Loan}
+          options={{ headerShown: false }}
+        />
+        <Stack.Screen
+        name='History'
+        component={History}
+        options={{ headerShown: false }}
+        />
+        <Stack.Screen
+        name='Scan'
+        component={Scanner}
+        options={{ headerShown: false }}
+        />
+      </Stack.Navigator>
+    </NavigationContainer>
   );
 }
 
-
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: "#0f0317",
-    
-  }
-});
-
 export default App;
+

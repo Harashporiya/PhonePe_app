@@ -1,10 +1,12 @@
 import React from 'react';
-import { View, Text, StyleSheet, StatusBar } from 'react-native';
+import { View, Text, StyleSheet, StatusBar, TouchableOpacity } from 'react-native';
 import Feather from '@expo/vector-icons/Feather';
 import MaterialIcons from '@expo/vector-icons/MaterialIcons';
 import AntDesign from '@expo/vector-icons/AntDesign';
+import { useNavigation } from '@react-navigation/native';
 
 const App = () => {
+  const navigation = useNavigation();
   return (
     <>
       <View style={styles.container}>
@@ -20,7 +22,9 @@ const App = () => {
         </View>
 
         <View style={styles.bell}>
+          <TouchableOpacity onPress={()=>navigation.navigate("Scan")} >
           <MaterialIcons name="qr-code-scanner" size={24} color="white" style={styles.bellIcon} />
+          </TouchableOpacity>
           <Feather name="bell" size={24} color="white" style={styles.bellIcon} />
           <AntDesign name="questioncircleo" size={24} color="white" style={styles.bellIcon} />
         </View>

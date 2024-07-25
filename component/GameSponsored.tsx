@@ -40,7 +40,7 @@ const GameSponsored = () => {
           </View>
 
           <View style={styles.iconBox}>
-            <TouchableOpacity onPress={() => openLink("https://play.google.com/store/apps/details?id=com.phonepe.stockbroking")}>
+            <TouchableOpacity onPress={() => openLink("https://www.mpl.live/lp/cardgames?af_c_id=BC2407051542180618529915&pid=phonepe_int&af_click_lookback=7d&utm_source=phonepe_int&utm_medium=Partnership&af_ad=OF-29050_MPL_GamingStripIcon_CPC13_15th-16thJuly_MPLCards_Android&utm_campaign=Phonepe_Partnership_AllCards_Perf_Android_Icon_SG&clickid=CK2407252011065034823669&af_siteid=PUB22024&af_ref=Phonepe_CK2407252011065034823669&af_sub_siteid=ADU2209141633472225663960&advertising_id=8bc3f01f-7dd4-4550-a123-33113a127649&af_ad_id=BAD2407121642279496532807&c=Phonepe_Partnership_AllCards_Perf_Android_Icon_SG&referrer=Phonepe_CK2407252011065034823669")}>
               <View style={styles.iconContainer}>
                 <Image
                   source={{ uri:"https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/0c/2d/78/0c2d7827-8771-729d-1f1a-434636eda893/AppIcon-1x_U007ephone-0-0-0-P3-85-220-0.png/1200x600wa.png" }}
@@ -52,7 +52,7 @@ const GameSponsored = () => {
           </View>
 
           <View style={styles.iconBox}>
-            <TouchableOpacity onPress={() => openLink("https://www.buddyloan.com/")}>
+            <TouchableOpacity onPress={() => openLink("https://www.winzogames.com/ps?af_c_id=BC2407081544248528529734&pid=phonepe_int&is_retargeting=true&af_click_lookback=7d&utm_source=phonepe_int&utm_medium=paid-cpc&utm_campaign=ATFicon&clickid=CK2407252011064999759036&af_reengagement_window=7d&af_siteid=PUB22024&af_ref=Phonepe_CK2407252011064999759036&af_sub_siteid=ADU2209051225197071409807&advertising_id=8bc3f01f-7dd4-4550-a123-33113a127649&af_inactivity_window=7d&af_ad_id=BAD2407081546518876467310&c=ATFicon&referrer=Phonepe_CK2407252011064999759036")}>
               <View style={styles.iconContainer}>
                 <Image
                   source={{ uri: "https://d3g4wmezrjkwkg.cloudfront.net/website/images/homePage/ludo-en.webp" }}
