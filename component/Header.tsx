@@ -18,7 +18,9 @@ const App = () => {
           <View style={styles.icon}>
             <Feather name="user" size={22} color="#542b95" />
           </View>
+          <TouchableOpacity onPress={()=>navigation.navigate("Map")}>
           <Text style={styles.add}>Add Address</Text>
+          </TouchableOpacity>
         </View>
 
         <View style={styles.bell}>

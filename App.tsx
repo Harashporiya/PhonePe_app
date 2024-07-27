@@ -5,6 +5,8 @@ import Show from './Page/Show';
 import Loan from './component/Loan';
 import History from './component/History';
 import Scanner from './Page/Scanner';
+import Map from './Page/Map';
+
 const Stack = createStackNavigator();
 
 function App() {
@@ -31,6 +33,10 @@ function App() {
         component={Scanner}
         options={{ headerShown: false }}
         />
+        <Stack.Screen
+        name='Map'
+        component={Map}
+        options={{ headerShown: false }} />
       </Stack.Navigator>
     </NavigationContainer>
   );
