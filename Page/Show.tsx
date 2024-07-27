@@ -16,24 +16,24 @@ import Footer from '../component/Footer';
 const Show = () => {
   return (
     <>
-    
-      <Header  />
-      <ScrollView>
-      <View style={styles.container}>
-      <TransferMoney/> 
-      <RechargeBill/>
-      <Loan/>
-      <SponsoredLinks/>
-      <Insurance/>
-      <Travel/>
-      <Slider/>
-      <TransitFood/>
-      <Purchases/>
-      <GameSponsored/>
-      </View>
 
-    </ScrollView>
-    <Footer/>
+      <Header />
+      <ScrollView>
+        <View style={styles.container}>
+          <TransferMoney />
+          <RechargeBill />
+          <Loan />
+          <SponsoredLinks />
+          <Insurance />
+          <Travel />
+          <Slider />
+          <TransitFood />
+          <Purchases />
+          <GameSponsored />
+        </View>
+
+      </ScrollView>
+      <Footer />
     </>
   );
 }
@@ -44,7 +44,7 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: "#0f0317",
-    
+
   }
 });
 

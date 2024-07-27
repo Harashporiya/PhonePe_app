@@ -1,10 +1,12 @@
-import { View, Text, StyleSheet } from 'react-native'
+import { View, Text, StyleSheet, TouchableOpacity } from 'react-native'
 import React from 'react'
 import { FontAwesome5, AntDesign, MaterialCommunityIcons } from '@expo/vector-icons';
 import MaterialIcons from '@expo/vector-icons/MaterialIcons';
-
+import { useNavigation , NavigationProp} from '@react-navigation/native';
+import { RootStackParamList } from './Navigation';
 
 const TransferMoney = () => {
+  const navigation = useNavigation<NavigationProp<RootStackParamList>>();
   return (
     <>
       <View style={styles.transferContainer}>
@@ -14,7 +16,9 @@ const TransferMoney = () => {
 
           <View style={styles.iconBox}>
             <View style={styles.iconContainer}>
+              <TouchableOpacity onPress={()=>navigation.navigate("Mobile")}>
               <FontAwesome5 name='user' size={24} color='white' />
+              </TouchableOpacity>
             </View>
             <Text style={styles.text}>To Mobile Number</Text>
           </View>
@@ -28,7 +32,9 @@ const TransferMoney = () => {
 
           <View style={styles.iconBox}>
             <View style={styles.iconContainer}>
+              <TouchableOpacity onPress={()=>navigation.navigate("Self")}>
               <FontAwesome5 name='user-circle' size={24} color='white' />
+              </TouchableOpacity>
             </View>
             <Text style={styles.text}>To Self Account</Text>
           </View>

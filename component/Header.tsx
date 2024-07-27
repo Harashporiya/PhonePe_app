@@ -3,31 +3,32 @@ import { View, Text, StyleSheet, StatusBar, TouchableOpacity } from 'react-nativ
 import Feather from '@expo/vector-icons/Feather';
 import MaterialIcons from '@expo/vector-icons/MaterialIcons';
 import AntDesign from '@expo/vector-icons/AntDesign';
-import { useNavigation } from '@react-navigation/native';
+import { useNavigation, NavigationProp } from '@react-navigation/native';
+import { RootStackParamList } from './Navigation';
 
-const App = () => {
-  const navigation = useNavigation();
+const HomeScreen = () => {
+  const navigation = useNavigation<NavigationProp<RootStackParamList>>();
+  
   return (
     <>
       <View style={styles.container}>
-        <StatusBar
-          backgroundColor={'#3f1e65'}
-          barStyle={'light-content'}
-        />
+        <StatusBar backgroundColor={'#3f1e65'} barStyle={'light-content'} />
         <View style={styles.user}>
           <View style={styles.icon}>
             <Feather name="user" size={22} color="#542b95" />
           </View>
-          <TouchableOpacity onPress={()=>navigation.navigate("Map")}>
-          <Text style={styles.add}>Add Address</Text>
+          <TouchableOpacity onPress={() => navigation.navigate('Map')}>
+            <Text style={styles.add}>Add Address</Text>
           </TouchableOpacity>
         </View>
 
         <View style={styles.bell}>
-          <TouchableOpacity onPress={()=>navigation.navigate("Scan")} >
-          <MaterialIcons name="qr-code-scanner" size={24} color="white" style={styles.bellIcon} />
+          <TouchableOpacity onPress={() => navigation.navigate('Scan')}>
+            <MaterialIcons name="qr-code-scanner" size={24} color="white" style={styles.bellIcon} />
           </TouchableOpacity>
-          <Feather name="bell" size={24} color="white" style={styles.bellIcon} />
+          <TouchableOpacity onPress={() => navigation.navigate('Notification')}>
+            <Feather name="bell" size={24} color="white" style={styles.bellIcon} />
+          </TouchableOpacity>
           <AntDesign name="questioncircleo" size={24} color="white" style={styles.bellIcon} />
         </View>
       </View>
@@ -70,4 +71,4 @@ const styles = StyleSheet.create({
   }
 });
 
-export default App;
+export default HomeScreen;
